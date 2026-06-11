@@ -4,6 +4,7 @@ const BilliardTable = require('./BilliardTable');
 const User = require('./User');
 
 const Invoice = sequelize.define('Invoice', {
+  tableName: 'Invoices',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,

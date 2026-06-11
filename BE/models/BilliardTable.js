@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database');
 
 const BilliardTable = sequelize.define('BilliardTable', {
+  tableName: 'BilliardTables',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,

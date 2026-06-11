@@ -4,6 +4,7 @@ const Invoice = require('./Invoice');
 const Service = require('./Service');
 
 const InvoiceDetail = sequelize.define('InvoiceDetail', {
+  tableName: 'InvoiceDetails',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
