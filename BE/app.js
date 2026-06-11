@@ -8,7 +8,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://quanlybillard-deploy.vercel.app',
-    'https://quanlybillard*.vercel.app'
+    /\.vercel\.app$/
   ],
   credentials: true
 }));
