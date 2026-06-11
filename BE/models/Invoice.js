@@ -43,7 +43,8 @@ const Invoice = sequelize.define('Invoice', {
     defaultValue: 'Đang chơi'
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  freezeTableName: true
 });
 
 module.exports = Invoice;

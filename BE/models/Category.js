@@ -33,7 +33,8 @@ const Category = sequelize.define('Category', {
     defaultValue: 'ring-slate-100'
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  freezeTableName: true
 });
 
 module.exports = Category;

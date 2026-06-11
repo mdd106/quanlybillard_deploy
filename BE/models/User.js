@@ -30,7 +30,8 @@ const User = sequelize.define('User', {
     allowNull: true
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  freezeTableName: true
 });
 
 module.exports = User;

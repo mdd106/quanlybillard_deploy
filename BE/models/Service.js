@@ -25,7 +25,8 @@ const Service = sequelize.define('Service', {
     allowNull: true
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  freezeTableName: true
 });
 
 module.exports = Service;

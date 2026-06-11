@@ -24,7 +24,8 @@ const InvoiceDetail = sequelize.define('InvoiceDetail', {
     allowNull: false
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  freezeTableName: true
 });
 
 module.exports = InvoiceDetail;

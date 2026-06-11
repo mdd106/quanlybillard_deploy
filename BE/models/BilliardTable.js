@@ -21,7 +21,8 @@ const BilliardTable = sequelize.define('BilliardTable', {
     allowNull: false
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  freezeTableName: true
 });
 
 module.exports = BilliardTable;
