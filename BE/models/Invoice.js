@@ -2,7 +2,6 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database');
 
 const Invoice = sequelize.define('Invoice', {
-  tableName: 'Invoices',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -17,7 +16,7 @@ const Invoice = sequelize.define('Invoice', {
     allowNull: true
   },
   total_time: {
-    type: DataTypes.INTEGER, // in minutes
+    type: DataTypes.INTEGER,
     allowNull: true,
     defaultValue: 0
   },
@@ -41,6 +40,7 @@ const Invoice = sequelize.define('Invoice', {
     defaultValue: 'Đang chơi'
   }
 }, {
+  tableName: 'Invoices',
   timestamps: true,
   freezeTableName: true
 });

@@ -2,7 +2,6 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database');
 
 const InvoiceDetail = sequelize.define('InvoiceDetail', {
-  tableName: 'InvoiceDetails',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -13,7 +12,7 @@ const InvoiceDetail = sequelize.define('InvoiceDetail', {
     allowNull: false,
     defaultValue: 1
   },
-  price: { // Historical price at the time of purchase
+  price: {
     type: DataTypes.INTEGER,
     allowNull: false
   },
@@ -22,6 +21,7 @@ const InvoiceDetail = sequelize.define('InvoiceDetail', {
     allowNull: false
   }
 }, {
+  tableName: 'InvoiceDetails',
   timestamps: true,
   freezeTableName: true
 });

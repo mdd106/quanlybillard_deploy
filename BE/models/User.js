@@ -2,7 +2,6 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database');
 
 const User = sequelize.define('User', {
-  tableName: 'Users',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -30,6 +29,7 @@ const User = sequelize.define('User', {
     allowNull: true
   }
 }, {
+  tableName: 'Users',
   timestamps: true,
   freezeTableName: true
 });
