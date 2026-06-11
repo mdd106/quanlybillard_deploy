@@ -40,8 +40,11 @@ const createAdminIfNotExist = async () => {
 const startServer = async () => {
   await connectDB();
 
+  // Import all models to register them with sequelize
+  require('./models');
+
   // Sync database models
-  await sequelize.sync({ alter: true }).then(() => {
+  await sequelize.sync({ force: true }).then(() => {
     console.log('Database synced');
   }).catch((err) => {
     console.error('Failed to sync database: ' + err.message);
