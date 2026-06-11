@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database');
 
 const Category = sequelize.define('Category', {
+  tableName: 'Categories',
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,

@@ -1,7 +1,5 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database');
-const BilliardTable = require('./BilliardTable');
-const User = require('./User');
 
 const Invoice = sequelize.define('Invoice', {
   tableName: 'Invoices',

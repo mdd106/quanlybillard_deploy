@@ -43,14 +43,15 @@ const startServer = async () => {
   // Import all models to register them with sequelize
   require('./models');
 
-  // Sync database models
+  // Sync database models first
   await sequelize.sync({ force: true }).then(() => {
     console.log('Database synced');
   }).catch((err) => {
     console.error('Failed to sync database: ' + err.message);
   });
 
-  // Create admin user
+  // Create admin user (wait for sync to complete)
+  await new Promise(resolve => setTimeout(resolve, 2000));
   await createAdminIfNotExist();
 
   server.listen(PORT, () => {
