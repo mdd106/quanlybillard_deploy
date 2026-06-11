@@ -3,8 +3,15 @@ const cors = require('cors');
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// CORS Configuration
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://quanlybillard-deploy.vercel.app',
+    'https://quanlybillard*.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
